@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tuChanchita - Educación Financiera para Jóvenes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --rosa-oscuro: #9e2146;
+      --rosa-claro: #f9ccd2;
+      --fucsia: #e63963;
+      --fondo: #fff8f8;
+      --texto: #3b3b3b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--fucsia);
+      color: white;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img.logo {
+      height: 110px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--rosa-claro);
+    }
+
+    .spacer {
+      height: 90px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--rosa-claro);
+    }
+
+    .hero img.mascota {
+      width: 200px;
+      margin-top: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--rosa-oscuro);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .cta-btn {
+      background: var(--fucsia);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .hero .cta-btn:hover {
+      background: var(--rosa-oscuro);
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      width: 250px;
+    }
+
+    .feature i {
+      font-size: 2rem;
+      color: var(--fucsia);
+      margin-bottom: 1rem;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 2rem;
+    }
+
+    .extra {
+      background: #ffffff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .extra h2 {
+      color: var(--rosa-oscuro);
+      margin-bottom: 1rem;
+    }
+
+    .extra p {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      background-color: var(--rosa-claro);
+      padding: 1rem;
+      border-left: 5px solid var(--rosa-oscuro);
+      font-weight: bold;
+      margin: 2rem auto;
+      max-width: 600px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: var(--rosa-oscuro);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">tuChanchita</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="spacer"></div>
+
+  <section class="hero">
+    <h1>Aprende finanzas jugando</h1>
+    <p>Una app educativa gamificada para mejorar tus habilidades financieras desde joven.</p>
+    <img src="img/img1.png" alt="Mascota tuChanchita" class="mascota">
+    <a href="#" class="cta-btn">Descargar App</a>
+  </section>
+
+  <section id="sobre" class="section">
+    <h2>¿Qué es tuChanchita?</h2>
+    <p>Es una plataforma educativa diseñada para enseñar finanzas personales de manera interactiva y divertida a jóvenes entre 18 y 25 años. ¡Tu futuro financiero empieza hoy!</p>
+    <img src="img/img2.jpg" alt="Ilustración sobre ahorro">
+  </section>
+
+  <section class="extra">
+    <h2>¿Por qué elegir tuChanchita?</h2>
+    <p>Más que una app, es una experiencia que te enseña a ahorrar, planificar y tomar decisiones financieras desde la comodidad de tu celular. Diseñada para jóvenes, con lenguaje simple, herramientas útiles y recompensas que te motivan a seguir aprendiendo.</p>
+    <p>El 68% de jóvenes no recibe educación financiera formal. ¡Con tuChanchita eso cambia!</p>
+    <div class="highlight">
+      ¡Aprender a manejar tu dinero nunca fue tan divertido!
+    </div>
+    <p>Participa en desafíos mensuales, acumula puntos, desbloquea logros y compite con tus amigos. Conviértete en un experto en finanzas sin darte cuenta.</p>
+  </section>
+
+  <section id="beneficios" class="section">
+    <h2>Beneficios</h2>
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-gamepad"></i>
+        <h3>Gamificación</h3>
+        <p>Aprende con retos, logros y recompensas.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Educación Financiera</h3>
+        <p>Conoce conceptos como ahorro, presupuesto y crédito.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-piggy-bank"></i>
+        <h3>Autonomía Económica</h3>
+        <p>Mejora tus decisiones financieras desde ahora.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="caracteristicas" class="section">
+    <h2>Características</h2>
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-tasks"></i>
+        <h3>Retos interactivos</h3>
+        <p>Completa desafíos reales con simulaciones económicas.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Reportes visuales</h3>
+        <p>Visualiza tu progreso y hábitos de gasto.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Recomendaciones</h3>
+        <p>Recibe tips personalizados para ahorrar más.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contáctanos</h2>
+    <p>¿Deseas más información o colaborar con el proyecto?</p>
+    <p>Email: contacto@tuchanchita.pe</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 tuChanchita. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

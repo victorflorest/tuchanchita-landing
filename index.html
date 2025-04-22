@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tuChanchita - Educación Financiera para Jóvenes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Aprende finanzas jugando con tuChanchita. Educación financiera divertida para jóvenes.">
+  <meta property="og:image" content="img/img1.png">
   <style>
     :root {
       --rosa-oscuro: #9e2146;
@@ -20,13 +25,14 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Fredoka', sans-serif;
     }
 
     body {
       background: var(--fondo);
       color: var(--texto);
       line-height: 1.6;
+      font-size: 1rem;
     }
 
     header {
@@ -72,25 +78,29 @@
     }
 
     .hero img.mascota {
-      width: 200px;
+      width: 60%;
+      max-width: 400px;
+      min-width: 250px;
       margin-top: 1rem;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 1.5rem;
+      margin: 2rem auto 1.5rem auto;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
       color: var(--rosa-oscuro);
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 2rem;
     }
 
-    .hero .cta-btn {
+    .hero .cta-btn, .floating-btn {
       background: var(--fucsia);
       color: white;
       padding: 0.75rem 1.5rem;
@@ -102,27 +112,37 @@
       transition: background 0.3s;
     }
 
-    .hero .cta-btn:hover {
+    .hero .cta-btn:hover, .floating-btn:hover {
       background: var(--rosa-oscuro);
     }
 
     .section {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
     }
 
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 2.5rem;
     }
 
     .feature {
       background: white;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       width: 250px;
     }
 
@@ -130,12 +150,6 @@
       font-size: 2rem;
       color: var(--fucsia);
       margin-bottom: 1rem;
-    }
-
-    .section img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 2rem;
     }
 
     .extra {
@@ -171,11 +185,56 @@
       text-align: center;
       padding: 2rem;
     }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1001;
+    }
+
+    form input[type=email] {
+      padding: 0.5rem;
+      margin: 1rem 0;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 0.5rem 1rem;
+      background: var(--fucsia);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+    font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.8rem;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1 class="logo">tuChanchita</h1>
+    <h1 class="logo">tuChanchita - Educación Financiera para Jóvenes</h1>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#beneficios">Beneficios</a>
@@ -203,9 +262,7 @@
     <h2>¿Por qué elegir tuChanchita?</h2>
     <p>Más que una app, es una experiencia que te enseña a ahorrar, planificar y tomar decisiones financieras desde la comodidad de tu celular. Diseñada para jóvenes, con lenguaje simple, herramientas útiles y recompensas que te motivan a seguir aprendiendo.</p>
     <p>El 68% de jóvenes no recibe educación financiera formal. ¡Con tuChanchita eso cambia!</p>
-    <div class="highlight">
-      ¡Aprender a manejar tu dinero nunca fue tan divertido!
-    </div>
+    <div class="highlight">¡Aprender a manejar tu dinero nunca fue tan divertido!</div>
     <p>Participa en desafíos mensuales, acumula puntos, desbloquea logros y compite con tus amigos. Conviértete en un experto en finanzas sin darte cuenta.</p>
   </section>
 
@@ -254,11 +311,72 @@
   <section id="contacto" class="section">
     <h2>Contáctanos</h2>
     <p>¿Deseas más información o colaborar con el proyecto?</p>
+    <form>
+      <input type="email" placeholder="Tu correo" required>
+      <button type="submit">Suscribirme</button>
+    </form>
     <p>Email: contacto@tuchanchita.pe</p>
   </section>
 
+  <section class="section" data-aos="fade-up">
+    <h2>Lo que dicen nuestros usuarios</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>“Aprendí a ahorrar por primera vez gracias a esta app.”</p>
+        <span>Andrea, 20 años</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“Ideal para jóvenes que no saben por dónde empezar.”</p>
+        <span>Luis, 22 años</span>
+      </div>
+      <div class="testimonial-card">
+        <p>“¡La gamificación me motiva todos los días!”</p>
+        <span>Carla, 19 años</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq">
+      <h3>¿Es gratis usar tuChanchita?</h3>
+      <p>Sí, puedes acceder a la mayoría de las funcionalidades de forma gratuita.</p>
+
+      <h3>¿Necesito tener conocimientos previos?</h3>
+      <p>No, la app está diseñada para principiantes en educación financiera.</p>
+
+      <h3>¿En qué dispositivos funciona?</h3>
+      <p>Está disponible para Android y muy pronto para iOS.</p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 tuChanchita. Todos los derechos reservados.</p>
+      <p>&copy; 2025 tuChanchita. Todos los derechos reservados.</p>
+      <div class="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
   </footer>
+  </footer>
+
+    <button id="scrollTopBtn" title="Subir"><i class="fas fa-chevron-up"></i></button>
+  <a href="#" class="floating-btn">Descargar App</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    scrollTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
 </body>
 </html>
